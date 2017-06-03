@@ -1,0 +1,32 @@
+stage.set_background("hauntedhouse")
+sprite = codesters.Sprite("evilwizard")
+sprite.move_down(150)
+sprite.say("Thanks for helping me with my groceries!")
+pizza = ["dough", "pizza sauce", "cheese", "peppers"] 
+basics = ["bread", "eggs", "milk"]
+taco = ["tortillas", "cheese", "peppers", "salsa"]
+favorite_dish = ["mangoes", "salmon"]
+
+
+#my_display = codesters.Display(my_var, x, y)
+basics_display = codesters.Display(basics, 0, 175)
+pizza_display = codesters.Display(pizza, 0, 100)
+taco_display = codesters.Display(taco, 25)
+favorite_dish_display = codesters.Display(favorite_dish)
+stage.wait()
+pizza.append("olives")
+pizza_display.update(pizza)
+stage.wait()
+basics.remove("milk")
+basics_display.update(basics)
+taco_display.update(taco)
+stage.wait()
+taco.append("avocado") 
+taco_display.update(taco) 
+taco.remove("cheese")
+stage.wait() 
+favorite_dish_display.update(favorite_dish) 
+stage.wait()
+favorite_dish.append("broccoli")
+favorite_dish.remove("mangoes")
+favorite_dish_display.update(favorite_dish) 
